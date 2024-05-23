@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .body {
+        height: 77vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(200deg, #517fa4, #243949);
+      }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 450px;
+        margin: 20px;
+        background-color: #758a99;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        /* // 元素纵向排列 */
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        /* // 不让其被挤压 */
+        flex-shrink: 0;
+      }
+      .card .photo img {
+        width: 100%;
+        height: 100%;
+        /* // 保持原有尺寸 */
+        object-fit: cover;
+      }
+      .card .photo {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        overflow: hidden;
+        /* // 动画过度 */
+        transition: 0.5s;
+      }
+      /* // 鼠标移入之后样式 */
+      .card:hover .photo {
+        top: 30px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+      /* // 加个渐变背景更好看到名字 */
+      .card .photo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 50%, #222);
+      }
+      .card h1 {
+        position: absolute;
+        top: 370px;
+        transition: 0.5s;
+      }
+      .card:hover h1 {
+        top: 170px;
+      }
+      .card h2 {
+        margin-top: 220px;
+        width: 80%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+      .card p {
+        width: 90%;
+        text-indent: 32px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 30px;
+      }
+      .card a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 8px 32px;
+        border-radius: 8px;
+      }
+      .card a:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="card">
+        <div class="photo">
+          <img
+            src="https://s2.loli.net/2024/05/23/NiGoO4vFHRCu6x1.jpg"
+            alt=""
+          />
+        </div>
+        <h1>qq</h1>
+        <h2>2172826854</h2>
+        <p></p>
+        了解更多
+      </div>
+
+      <div class="card">
+        <div class="photo">
+          <img
+            src="https://s2.loli.net/2024/05/23/2NkQT39MbSREfnZ.jpg"
+            alt=""
+          />
+        </div>
+        <h1>简介</h1>
+        <h2>name:李文通</h2>
+
+        <p>很抱歉,这个又高又帅的Sunshine Boy(阳光男孩)没有介绍自己</p>
+      </div>
+
+      <div class="card">
+        <div class="photo">
+          <img
+            src="https://s2.loli.net/2024/05/23/DTFasUkQxpo6zme.jpg"
+            alt=""
+          />
+        </div>
+        <h1>wx</h1>
+        <h2>qaq159591</h2>
+        <p>有事请联系</p>
+      </div>
+    </div>
+  </body>
+</html>
